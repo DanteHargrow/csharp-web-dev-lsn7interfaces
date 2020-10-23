@@ -8,12 +8,15 @@ namespace IceCreamShop
     {
         public int Compare(Cone x,Cone y)
         {
-            if(x.Cost - y.Cost > 0)
+            if(x.Cost > y.Cost)
+            {
+                return 1;
+            }
+            else if (x.Cost < y.Cost)
             {
                 return -1;
             }
-            else
-                return 1;
+            return 0 ;
         }
     }
 }
